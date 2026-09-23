@@ -210,7 +210,7 @@ Sources retrieved: admin_add_drop_deadline.txt, admin_grade_appeals.txt, admin_t
 
      Milestone 4. -->
 
-threshold = 0.48 -> I set this number based on my observation of the gap in the best distance as printed below
+threshold = 0.5 -> I set this number based on my observation of the gap in the best distance as printed below
 
 | Question | In corpus? | Best distance |
 | how many black-and-white pages can we print in a semester? | yes | 0.2528 |
