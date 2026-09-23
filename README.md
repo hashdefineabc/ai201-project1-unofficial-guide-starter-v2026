@@ -133,11 +133,70 @@ Best time to do laundry here is Tuesday or Wednesday morning. Sunday after 6pm y
 <!-- One complete question and answer, pasted as text, with the source line
      visible. Milestone 4. -->
 
-**Question:**
+**Question:** (.venv) manasamanjunath@Manasas-MacBook-Air ai201-project1-unofficial-guide-starter-v2026 % python3 app.py ask "How long does unofficial transcripts take?" --show-prompt
 
 **Answer:**
 
 ```
+  (best distance 0.225, cutoff 0.48)
+
+======================================================================
+System instruction sent with the prompt
+======================================================================
+You answer questions using only the documents provided to you.
+
+Rules:
+- Use only the information in the documents below. Do not use anything you know from elsewhere.
+- If the documents don't cover the question, say you don't have enough information. Do not guess.
+- Name the document your answer came from, using the filename given in each excerpt.
+- Be brief. Two or three sentences is usually enough.
+
+======================================================================
+The assembled prompt, exactly as sent
+======================================================================
+Documents:
+
+[from admin_transcript_requests.txt]
+On the transcript requests
+
+Official transcripts cost $8 and take three business days electronically, or ten by post. Unofficial ones are free and instant from the student portal, and are accepted by most employers and by every graduate programme at the application stage.
+
+[from admin_add_drop_deadline.txt]
+On the add/drop deadline
+
+You can add a course through the end of the second week. Dropping is a longer window — through the end of week six — but a drop after week two shows as a W on your transcript. Nothing anywhere on the registrar's site says this plainly, and students find out from each other.
+
+[from admin_grade_appeals.txt]
+On the grade appeals
+
+A grade appeal starts with the instructor and has to be raised within fifteen days of the grade posting. Only after that does it go to the department. Skipping the instructor step gets the appeal returned, which wastes most of the fifteen days.
+
+[from admin_withdrawal_deadline.txt]
+On the withdrawal deadline
+
+Withdrawal is a different thing from dropping and has a different date. Dropping ends at week six. Withdrawal runs to week ten, requires an adviser signature, and puts a W on the transcript that doesn't affect GPA. The two dates appear on different pages of the registrar's site and this catches people every year.
+
+[from course_biol_160_workload.txt]
+Workload for BIOL 160 Cell Biology
+
+People keep asking so: 9 to 11 hours a week, the heaviest first-year course by reputation. That's real time, not optimistic time.
+
+It's front-loaded — the first month is heavier than the rest, partly because you're learning the format.
+
+---
+
+Question: How long does unofficial transcripts take?
+
+Answer using only the documents above, and name the file you used.
+======================================================================
+
+Unofficial transcripts are instant. 
+
+Source: admin_transcript_requests.txt
+
+Sources retrieved: admin_add_drop_deadline.txt, admin_grade_appeals.txt, admin_transcript_requests.txt, admin_withdrawal_deadline.txt, course_biol_160_workload.txt
+
+
 ```
 
 **My relevance cutoff:**
@@ -151,9 +210,19 @@ Best time to do laundry here is Tuesday or Wednesday morning. Sunday after 6pm y
 
      Milestone 4. -->
 
+threshold = 0.48 -> I set this number based on my observation of the gap in the best distance as printed below
+
 | Question | In corpus? | Best distance |
-|---|---|---|
-|  |  |  |
+| how many black-and-white pages can we print in a semester? | yes | 0.2528 |
+| when should we expect extreme freezing temperatures? | yes | 0.4745 |
+| when is the quiet hours in Morrow house? | yes | 0.3227 |
+| when is the worst time to do laundry in Fenwick Court | yes | 0.2233 |
+| How long does unofficial transcripts take? | yes | 0.2247 |
+| What is the capital of Mongolia? | no | 0.8246 |
+| How do I change the oil in a diesel engine? | no | 0.934 |
+| Who won the 1994 World Cup? | no | 0.8095 |
+| What is the recommended dosage of ibuprofen for a headache? | no | 0.8442 |
+| How do I write a for loop in Rust? | no | 0.8326 |
 
 ## How I Used AI
 
