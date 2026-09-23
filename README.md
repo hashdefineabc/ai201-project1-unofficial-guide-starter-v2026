@@ -217,6 +217,7 @@ Sources retrieved: admin_add_drop_deadline.txt, admin_grade_appeals.txt, admin_t
 
 threshold = 0.5 -> I set this number based on my observation of the gap in the best distance as printed below
 
+```
 | Question | In corpus? | Best distance |
 | how many black-and-white pages can we print in a semester? | yes | 0.2528 |
 | when should we expect extreme freezing temperatures? | yes | 0.4745 |
@@ -228,6 +229,8 @@ threshold = 0.5 -> I set this number based on my observation of the gap in the b
 | Who won the 1994 World Cup? | no | 0.8095 |
 | What is the recommended dosage of ibuprofen for a headache? | no | 0.8442 |
 | How do I write a for loop in Rust? | no | 0.8326 |
+
+```
 
 ## How I Used AI
 
