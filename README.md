@@ -27,10 +27,12 @@ Manasa Manjunath, corpus: campus_life
 
      Milestone 5. -->
 
+     I picked campus_life corpus. This system answers the questions that are not available in the general college faqs. These are real students experiences.
+
 ## Chunking Strategy
 
-**Chunk size:**
-**Overlap:**
+**Chunk size:** 500
+**Overlap:** 75
 
 <!-- What about YOUR documents made you pick these numbers? Short posts and
      long sectioned guides don't want the same chunking, and "800 seemed
@@ -44,8 +46,9 @@ Manasa Manjunath, corpus: campus_life
 
 I updated my split_documents function to split based on paragraph break, but it gave separate chunks for headings, like
 "PHYS 130 Mechanics — assessment" which is not useful and doesn't answer any question. So I decided to just reduce 
-the chunk size and overlap
+the chunk size and overlap. Since campus_life corpus contains short documents, the original chunk size was a overkill. 
 
+The following are the chunks I got when I split based on paragraph break.
 <!-- ======================================================================
 Chunk 1  |  source: admin_add_drop_deadline.txt#0  |  produced by: chunker.py::split_documents
 ======================================================================
