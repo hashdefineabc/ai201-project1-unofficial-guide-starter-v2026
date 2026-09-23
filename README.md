@@ -236,8 +236,14 @@ threshold = 0.5 -> I set this number based on my observation of the gap in the b
      Milestone 5. -->
 
 **1.**
+I asked Claude to help me with the chunking function. Since I picked the campus_life corpus I wasn't sure if
+it even needed a different chunking strategy. Claude agreed to me. But I asked it if a document contains unrelated info
+then its best to come up with a chunking strategy. It asked me how many posts are like that. If only 3-4 posts
+contains multiple information in a single doc then its an edge case and wouldn't need more chunking, else it needs.
+Since our corpus contains more than half of the documents with multiple information, I asked it to come up with a new chunking function. So we decided to chunk based on paragraph break. However this didn't seem to work since it created a new chunk for the title as well. When I noticed this in my chunk and gave it to claude it tried to fold the title to the first line. I didn't feel this is correct since the subsequent line is also related to the same title, and I was running out of time, so I decided to just reduce the chunk size and overlap and keep the chunking function as is.
 
 **2.**
+I asked claude to come up with a threshold. It matched with my expections.
 
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
