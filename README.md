@@ -1,6 +1,6 @@
 # The Unofficial Guide
 
-<!-- Manasa Manjunath, corpus: campus_life -->
+Manasa Manjunath, corpus: campus_life
 
 > **This file is your submission.** Fill it in as you go — most sections get
 > written during the milestone that produces them, not at the end.
