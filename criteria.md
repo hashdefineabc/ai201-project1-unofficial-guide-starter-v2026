@@ -57,6 +57,8 @@ in at least 4 of 5 tries.
 
 ## 4. Something about your chunks
 
+5 of 5 sampled chunks are meaningful and answers a question without needing additional context
+
 <!-- YOU WRITE THIS ONE.
 
      How would you know if your chunks were the right size? Name something
@@ -72,12 +74,14 @@ in at least 4 of 5 tries.
 
 
 **Why this target:**
-
+No chuck should need additional context to answer a question.
 
 
 ---
 
 ## 5. Your choice
+
+5 of 5 sampled chunks points to the correct source.
 
 <!-- YOU WRITE THIS ONE TOO.
 
@@ -90,7 +94,7 @@ in at least 4 of 5 tries.
 
 
 **Why this target:**
-
+All chunks should remember its correct source.
 
 
 ---

@@ -42,6 +42,36 @@ Manasa Manjunath, corpus: campus_life
 
      Milestone 3. -->
 
+I updated my split_documents function to split based on paragraph break, but it gave separate chunks for headings, like
+"PHYS 130 Mechanics — assessment" which is not useful and doesn't answer any question. So I decided to just reduce 
+the chunk size and overlap
+
+<!-- ======================================================================
+Chunk 1  |  source: admin_add_drop_deadline.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+On the add/drop deadline You can add a course through the end of the second week. Dropping is a longer window — through the end of week six — but a drop after week two shows as a W on your transcript. Nothing anywhere on the registrar's site says this plainly, and students find out from each other.
+
+======================================================================
+Chunk 2  |  source: course_cs_340_exams.txt#2  |  produced by: chunker.py::split_documents
+======================================================================
+Start the term project in week three, not week eight; everyone learns this the hard way.
+
+======================================================================
+Chunk 3  |  source: course_phys_130_exams.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+PHYS 130 Mechanics — assessment
+
+======================================================================
+Chunk 4  |  source: housing_aldridge_hall.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+Aldridge Hall — what it's actually like
+
+======================================================================
+Chunk 5  |  source: housing_morrow_house_laundry.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+Laundry in Morrow House Machines take $1.50 wash, $1.25 dry, coin or card. There are eight washers and six dryers for the building, which is the wrong ratio and means the dryers back up on Sunday evenings. -->
+
+
 ## Sample Chunks
 
 <!-- Five chunks, pasted as text. Label each one and name the file it came from
@@ -53,61 +83,50 @@ Manasa Manjunath, corpus: campus_life
 
      Milestone 3. -->
 
-**Chunk 1** — source: `admin_add_drop_deadline.txt#0` — produced by: `chunker.py::fallback_split`
-
-```
+======================================================================
+Chunk 1  |  source: admin_add_drop_deadline.txt#0  |  produced by: chunker.py::fallback_split
+======================================================================
 On the add/drop deadline
 
 You can add a course through the end of the second week. Dropping is a longer window — through the end of week six — but a drop after week two shows as a W on your transcript. Nothing anywhere on the registrar's site says this plainly, and students find out from each other.
-```
 
-**Chunk 2** — source: `course_biol_160.txt#0` — produced by: `chunker.py::fallback_split`
+======================================================================
+Chunk 2  |  source: course_biol_160_exams.txt#0  |  produced by: chunker.py::fallback_split
+======================================================================
+BIOL 160 Cell Biology — assessment
 
-```
-BIOL 160 Cell Biology
+Four unit tests and a cumulative final. Not curved.
 
-I lived here my sophomore year. Format is lecture three times a week with a weekly lab. Assessment: four unit tests and a cumulative final. Not curved.
+The unit tests come fast, roughly every three weeks; falling behind once is very hard to recover from.
 
-Expect 9 to 11 hours a week, the heaviest first-year course by reputation.
+======================================================================
+Chunk 3  |  source: course_math_220.txt#0  |  produced by: chunker.py::fallback_split
+======================================================================
+MATH 220 Linear Algebra
 
-The one piece of advice: the unit tests come fast, roughly every three weeks; falling behind once is very hard to recover from.
-```
+I lived here my sophomore year. Format is chalk-and-talk lecture, weekly problem sets marked for correctness. Assessment: two midterms and a cumulative final. Curved to a b- median.
 
-**Chunk 3** — source: `course_hist_118_workload.txt#0` — produced by: `chunker.py::fallback_split`
+Expect 6 to 8 hours a week, almost all of it on problem sets.
 
-```
-Workload for HIST 118 Modern World History
+The one piece of advice: the problem sets are the course; the lectures make sense afterwards rather than during.
 
-People keep asking so: a lot of reading, about 120 pages a week, but no problem sets. That's real time, not optimistic time.
+======================================================================
+Chunk 4  |  source: dining_the_atrium_followup.txt#0  |  produced by: chunker.py::fallback_split
+======================================================================
+Re: The Atrium
 
-It's front-loaded — the first month is heavier than the rest, partly because you're learning the format.
+Adding to what people have said about The Atrium. The wait figure of no queue matches what I've seen. If you're trying to eat between classes, go before 11:45 and it's a different building entirely.
 
-```
+Also worth saying: picked clean by 1:15 and not restocked again until the next morning. Nobody tells you this at orientation.
 
-**Chunk 4** — source: `dining_pellew_dining_hall_followup.txt#0` — produced by: `dining_pellew_dining_hall_followup.txt#0`
+======================================================================
+Chunk 5  |  source: housing_innisfree_hall_laundry.txt#0  |  produced by: chunker.py::fallback_split
+======================================================================
+Laundry in Innisfree Hall
 
-```
-Re: Pellew Dining Hall
+Machines take $1.75 wash, $1.75 dry, app-based. There are eight washers and six dryers for the building, which is the wrong ratio and means the dryers back up on Sunday evenings.
 
-Adding to what people have said about Pellew Dining Hall. The wait figure of 12 to 18 minutes at peak matches what I've seen. If you're trying to eat between classes, go before 11:45 and it's a different building entirely.
-
-Also worth saying: the furthest hall from anywhere, next to the athletics centre. Nobody tells you this at orientation.
-
-```
-
-**Chunk 5** — source: `housing_innisfree_hall.txt#0` — produced by: `chunker.py::fallback_split`
-
-```
-Innisfree Hall — what it's actually like
-
-Transferred in last year, so take this with a grain of salt. Built 1991, renovated 2022. Rooms are doubles arranged as pairs sharing one bathroom between two rooms.
-
-The good: the shared-bathroom-between-two-rooms arrangement is the best compromise on campus.
-
-The bad: no air conditioning, which matters for the first three weeks of September.
-
-Laundry costs $1.75 wash, $1.75 dry, app-based. On noise: moderate; the building is L-shaped and the short wing is much quieter.
-```
+Best time to do laundry here is Tuesday or Wednesday morning. Sunday after 6pm you will wait.
 
 ## Sample Answer
 
